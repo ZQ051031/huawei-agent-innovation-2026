@@ -1,0 +1,10 @@
+date,vendor,amount,currency,category,type,reference,description
+2026-10-02,Northwest Digital,-380.00,CNY,equipment,expense,NW-001,Keyboard
+2026-10-13,Northwest Digital,-420.00,CNY,equipment,expense,NW-002,Monitor stand
+2026-10-22,West Lab Gear,-350.00,CNY,equipment,expense,NW-003,External drive
+2026-11-02,Atlas Studio,9800.00,CNY,other,income,AT-042,Client project payment
+2026-11-09,Cloudstack,-260.00,CNY,software,expense,CS-306,Cloud software subscription
+2026-11-11,Metro Express,-90.00,CNY,travel,expense,ME-301,Train ticket
+2026-11-13,Northwest Digital,-3200.00,CNY,equipment,expense,NW-004,Laptop upgrade
+2026-11-16,Pencil House,-80.00,CNY,office,expense,PH-100,Stationery and labels
+2026-11-18,Design Kit,-19.00,USD,software,expense,DK-029,Design subscription

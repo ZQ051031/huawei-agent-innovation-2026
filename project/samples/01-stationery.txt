@@ -1,0 +1,8 @@
+Invoice
+Vendor: Silk Road Stationery
+Invoice No: SR-114
+Date: 2026-11-05
+Description: Office supplies and printer paper
+Subtotal: CNY 225.00
+Tax: CNY 15.00
+Grand total: CNY 240.00

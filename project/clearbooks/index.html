@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClearBooks Agent</title>
+  <link rel="stylesheet" href="/ui.css">
+  <script src="/ui.js" defer></script>
+</head>
+<body>
+  <header class="shell top">
+    <a class="brand" href="/"><span class="mark" aria-hidden="true">CB</span> ClearBooks <span class="muted">Agent</span></a>
+    <div class="actions"><span class="local"><i></i><span data-copy="local">LOCAL WORKSPACE</span></span><button type="button" id="language" class="ghost">中文</button></div>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div><p class="eyebrow" data-copy="eyebrow">01 / FINANCE WORKSPACE</p>
+      <h1 data-copy="title">Know where your<br> money went.</h1>
+      <p data-copy="intro">Turn receipts and bank exports into a ledger that answers back.</p></div>
+      <button id="demo" class="primary" type="button" data-copy="demo">Load demo data</button>
+    </section>
+    <p id="status" role="status" hidden></p>
+    <section class="dash" aria-labelledby="dashboard-heading">
+      <div class="section-head"><h2 id="dashboard-heading" data-copy="dashboard">Monthly overview</h2>
+      <label class="period"><span class="sr" data-copy="month">Month</span><input id="month" type="month" required></label></div>
+      <div id="totals" class="totals"></div>
+      <div class="grid">
+        <article class="card"><h3 data-copy="spending">Spending by category</h3><div id="categories"></div></article>
+        <article class="card"><h3 data-copy="review">Needs review</h3><div id="alerts"></div></article>
+      </div>
+    </section>
+    <section class="grid detail">
+      <article class="card assistant" aria-labelledby="assistant-heading">
+        <p class="eyebrow" data-copy="agentTag">02 / AGENT DESK</p><h2 id="assistant-heading" data-copy="agent">Ask ClearBooks</h2>
+        <form id="ask"><label class="sr" for="question" data-copy="question">Question</label><div class="formline"><input id="question" maxlength="500" required placeholder="Which vendor did I pay most?"><button class="primary" data-copy="ask">Ask</button></div></form>
+        <div id="examples" class="examples"></div>
+        <div id="answer" aria-live="polite" class="answer" hidden></div>
+      </article>
+      <article class="card" aria-labelledby="ingest-heading">
+        <p class="eyebrow" data-copy="importTag">03 / DOCUMENT INBOX</p><h2 id="ingest-heading" data-copy="inbox">Import documents</h2>
+        <form id="upload"><label for="file" data-copy="uploadLabel">TXT, CSV or text PDF · max 5 MB each</label><input id="file" type="file" accept=".txt,.csv,.pdf" multiple required><button data-copy="upload">Import files</button></form>
+        <form id="paste"><label for="text" data-copy="paste">Or paste document text</label><textarea id="text" rows="3" required placeholder="Vendor: …"></textarea><button data-copy="saveText">Import pasted text</button></form>
+      </article>
+    </section>
+    <section class="grid detail">
+      <article class="card"><h2 data-copy="budgets">Budgets</h2><div id="budgets"></div>
+        <form id="budget"><div class="budget-fields">
+          <label><span data-copy="category">Category</span><select id="budget-category"></select></label>
+          <label><span data-copy="currency">Currency</span><select id="budget-currency"></select></label>
+          <label><span data-copy="limit">Limit</span><input type="number" id="budget-amount" min="0.01" step="0.01" required></label>
+        </div><button data-copy="saveBudget">Save budget</button></form>
+      </article>
+      <article class="card"><h2 data-copy="report">Monthly report</h2><p data-copy="reportDesc">Generate a plain-language review for the selected month.</p>
+        <button type="button" id="report" data-copy="generate">Generate report</button><div id="report-output" class="answer" aria-live="polite" hidden></div>
+      </article>
+    </section>
+    <section class="card detail"><div class="section-head"><h2 data-copy="ledger">Ledger and sources</h2><p id="record-count"></p></div>
+      <div class="table-wrap"><table><thead><tr>
+        <th data-copy="date">Date</th><th data-copy="vendor">Vendor</th><th data-copy="category">Category</th>
+        <th data-copy="amount">Amount</th><th data-copy="source">Source</th>
+      </tr></thead><tbody id="ledger"></tbody></table></div></section>
+    <footer><span>ClearBooks Agent</span><span data-copy="footer">Local by default · review before filing</span></footer>
+  </main>
+</body>
+</html>

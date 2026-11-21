@@ -1,0 +1,6 @@
+RECEIPT
+Merchant: Silk Road Stationery
+Reference: SR-114
+Date: 2026-11-05
+Category: Office supplies
+Amount paid: ￥240.00
